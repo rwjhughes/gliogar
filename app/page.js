@@ -32,7 +32,7 @@ const Index = () => {
         </div>
         <div className={styles.text}>
           <div className={styles.content}>
-            Ticéad
+            Ticéid
             <div className={styles.tooltip}>diabhal ticéid don am anois</div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Index = () => {
             go háirid trí mheáin na Gaeilge agus le ceoltóirí comhaimseartha Gaelacha.
             Tá muid lonnaithe i gConamara Theas.<br /><br />
             📧 <a href="mailto:gliogar22@gmail.com" target="_blank">gliogar22@gmail.com</a><br /><br />
-            <a href="https://instagram.com/gliogarceol" target="_blank">@glioagrceol</a></div>
+            <a href="https://instagram.com/gliogar_" target="_blank">@gliogar_</a></div>
         </div>
         <div className={styles.content}>
           <div className={styles.title}>Ticéid</div>

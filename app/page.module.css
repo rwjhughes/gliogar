@@ -13,8 +13,8 @@
 }
 
 .tile {
-  height: 50vh;
-  width: 20vw;
+  /* height: 50vh; */
+  width: 25vw;
   overflow: hidden;
   opacity: 0.5;
   transition: opacity 0.35s ease-in-out
@@ -32,8 +32,8 @@
 
 @media (max-width: 750px) {
   .tile {
-    width: 33.3vw;
-    height: 25vh;
+    width: 50vw;
+    /* height: 25vh; */
   }
 }
 

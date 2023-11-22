@@ -2,10 +2,10 @@ import styles from './page.module.css'
 import React from 'react';
 
 const Index = () => {
-  const numberOfImages = 14; // Assuming you have 14 images
+  const numberOfImages = 16; //update on new posters
   const tiles = [];
 
-  for (let i = numberOfImages; i >= 0; i--) {
+  for (let i = numberOfImages - 1; i >= 0; i--) {
     tiles.push(
       <div key={i} className={styles.tile}>
         <img src={`/posters/${i}.jpg`} alt={`Image ${i}`} />

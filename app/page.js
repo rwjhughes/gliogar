@@ -28,8 +28,10 @@ const Index = () => {
             <a href="https://instagram.com/gliogar_" target="_blank">@gliogar_</a></div>
         </div>
         <div className={styles.content}>
-          <div className={styles.title}>Ticéid</div>
-          <div className={styles.tooltip}>diabhal ticéid don am anois</div>
+          <a href="http://bit.ly/gigdogaza"><div className={styles.title}>Ticéid<br />Gig Do Gaza</div>
+          </a>
+
+          {/* <div className={styles.tooltip}>diabhal ticéid don am anois</div> */}
         </div>
       </div>
     </div>

@@ -19,6 +19,16 @@ const Index = () => {
         {tiles}
       </div>
       <div className={styles.textcontainer}>
+
+        <div className={styles.content}>
+          <div className={styles.title}>Ticéid
+            <br /><a href="/ticead" target="_blank"><li>28 Aibreán<br />Cuar & Muireann Ní Shé</li></a>
+            {/* <br/><li><a href="/ticead" target="_blank">2 Bealtaine - Brighde Chaimbeul & Seamus Hyland</li></a> */}
+          </div>
+
+          {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
+        </div>
+
         <div className={styles.content}>
           <div className={styles.title}>Fúinn</div>
           <div className={styles.tooltip} style={{ width: '330px' }}>Is cnuasach ealaíontóirí agus ceoltóirí muid Gliogar a chuireanns ceolchoirmeacha ar siúl,
@@ -26,13 +36,6 @@ const Index = () => {
             Tá muid lonnaithe i gConamara Theas.<br /><br />
             📧 <a href="mailto:eolas@gliogar.ie" target="_blank">eolas@gliogar.ie</a><br /><br />
             <a href="https://instagram.com/gliogar_" target="_blank">@gliogar_</a></div>
-        </div>
-        <div className={styles.content}>
-          <div className={styles.title}>Ticéid</div>
-
-          <div className={styles.tooltip}><a href="/ticead" target="_blank"><li>28 Aibreán - Cuar & Muireann Ní Shé</li></a>
-            {/* <br/><a href="/ticead" target="_blank"><li>2 Bealtaine - Brighde Chaimbeul & Seamus Hyland</li></a> */}
-          </div>
         </div>
       </div>
     </div >

@@ -2,7 +2,7 @@ import styles from './page.module.css'
 import React from 'react';
 
 const Index = () => {
-  const numberOfImages = 16; //update on new posters
+  const numberOfImages = 17; //update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -30,10 +30,12 @@ const Index = () => {
         <div className={styles.content}>
           <div className={styles.title}>Ticéid</div>
 
-          <div className={styles.tooltip}>diabhal ticéid don am anois</div>
+          <div className={styles.tooltip}><a href="/ticead" target="_blank"><li>28 Aibreán - Cuar & Muireann Ní Shé</li></a>
+            {/* <br/><a href="/ticead" target="_blank"><li>2 Bealtaine - Brighde Chaimbeul & Seamus Hyland</li></a> */}
+          </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 export default Index;

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: tiempos;
+  src: url('../fonts/TiemposText-Regular.otf');
+}
+
 .html {
   background-color: black;
 }
@@ -49,6 +54,7 @@
   align-items: center;
   justify-content: center;
   gap: 100px;
+  font-family: tiempos;
 }
 
 .content {
@@ -82,7 +88,7 @@
   font-size: 15pt;
   position: absolute;
   transition: opacity 0.5s ease-in-out;
-  text-align: left;
+  text-align: justify;
 }
 
 .content:hover .tooltip {

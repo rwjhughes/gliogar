@@ -4,13 +4,13 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/ticead',
+                source: '/cuar',
                 destination: 'https://buytickets.at/gliogar/1193850',
                 permanent: false,
             },
             {
-                source: '/ticeid',
-                destination: 'https://buytickets.at/gliogar/1193850',
+                source: '/brighde',
+                destination: 'https://buytickets.at/gliogar/1209899',
                 permanent: false,
             },]
     }

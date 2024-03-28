@@ -1,8 +1,11 @@
 import styles from './page.module.css'
 import React from 'react';
 
+
+// ffmpeg -i 17.jpg -vf scale=400:500 17_0.jpg
+
 const Index = () => {
-  const numberOfImages = 17; //update on new posters
+  const numberOfImages = 18; //update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -22,8 +25,10 @@ const Index = () => {
 
         <div className={styles.content}>
           <div className={styles.title}>Ticéid
-            <br /><a href="/ticead" target="_blank"><li>28 Aibreán<br />Cuar & Muireann Ní Shé</li></a>
-            {/* <br/><li><a href="/ticead" target="_blank">2 Bealtaine - Brighde Chaimbeul & Seamus Hyland</li></a> */}
+            <br />
+            <a href="https://www.tickettailor.com/events/gliogar/1193850" target="_blank"><li><date>28 Aibreán</date><br />Cuar & Muireann Ní Shé</li></a>
+            <br />
+            <a href="https://www.tickettailor.com/events/gliogar/1209899" target="_blank"><li><date>2 Bealtaine</date> Brìghde Chaimbeul & Seamus Hyland</li></a>
           </div>
 
           {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}

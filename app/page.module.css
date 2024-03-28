@@ -62,11 +62,14 @@
   align-items: center;
   justify-content: center;
   width: 200px;
-  height: 150px;
-  border: 15px double rgb(22, 8, 42);
+  /* height: 150px; */
+  border: 15px double rgba(130, 99, 174, 0.523);
   border-radius: 5px;
   position: relative;
   cursor: pointer;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.375);
+
 }
 
 .title {
@@ -80,14 +83,15 @@
 .title li {
   font-size: 16pt;
   color: #e0dbf7;
-  text-shadow: 3px 3px 5px rgb(128, 24, 180);
-  background-color: rgba(0, 0, 0, 0.375);
+  text-shadow: 3px 3px 5px rgb(58, 24, 180);
   transition: color 0.3s, text-shadow 0.5s;
   text-align: right;
+  transition: 0.3s background-color;
 }
 
 .title li:hover {
   color: white;
+  background-color: #0000009f;
 }
 
 .tooltip {

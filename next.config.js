@@ -12,6 +12,11 @@ const nextConfig = {
                 source: '/brighde',
                 destination: 'https://buytickets.at/gliogar/1209899',
                 permanent: false,
+            },
+            {
+                source: '/bds',
+                destination: 'https://tinyurl.com/smachtbhannai',
+                permanent: false,
             },]
     }
 }

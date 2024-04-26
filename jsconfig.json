@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
     "paths": {
+<<<<<<< HEAD
       "@/*": [
         "./*"
       ]
     }
   }
 }
+=======
+      "@/*": ["./*"]
+    }
+  }
+}
+>>>>>>> 539c528 (Initial commit from Create Next App)

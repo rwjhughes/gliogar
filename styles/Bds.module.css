@@ -37,7 +37,8 @@
     position: absolute;
     top: 2%;
     left: 2%;
-    width: 200px
+    width: 200px;
+    cursor: pointer;
 }
 
 .bileog img {
@@ -57,6 +58,7 @@
     rotate: 90deg;
     scale: 0.9;
     display: none;
+    cursor: pointer;
 }
 
 .bileogText p {

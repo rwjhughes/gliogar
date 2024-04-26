@@ -1,12 +1,3 @@
-@font-face {
-  font-family: tiempos;
-  src: url('./fonts/TiemposText-Regular.otf');
-}
-
-.html {
-  background-color: black;
-}
-
 .imagecontainer {
   display: flex;
   flex-direction: row;
@@ -54,7 +45,6 @@
   align-items: center;
   justify-content: center;
   gap: 100px;
-  font-family: tiempos;
 }
 
 .content {

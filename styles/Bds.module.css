@@ -1,0 +1,78 @@
+.title {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 28%;
+}
+
+.countyList {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    gap: 25px;
+}
+
+.county {
+    font-size: 24pt;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    border: 2px rgb(254, 86, 86) dotted;
+    border-radius: 10px;
+    color: black;
+    text-shadow: 0px 0px 5px aliceblue;
+    transition: text-shadow 0.3s;
+}
+
+.county:hover {
+    color: aliceblue;
+    text-shadow: 0px 0px 5px black, 2px 0px black, -2px 0px black;
+}
+
+@media (max-width: 720px) {
+    .countyList {
+        gap: 15px;
+    }
+
+    .county {
+        font-size: 18pt;
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+
+    .title {
+        gap: 10%;
+    }
+}
+
+.cork {
+    background: linear-gradient(to right, red 50%, white 50%);
+}
+
+.galway {
+    background: linear-gradient(to right, maroon 50%, white 50%);
+}
+
+.mayo {
+    background: linear-gradient(to right, red 50%, green 50%);
+}
+
+.kerry {
+    background: linear-gradient(to right, green 50%, gold 50%);
+}
+
+.donegal {
+    background: linear-gradient(to right, gold 50%, green 50%);
+}
+
+.meath {
+    background: linear-gradient(to right, green 50%, gold 50%);
+}
+
+.waterford {
+    background: linear-gradient(to right, white 50%, blue 50%);
+}

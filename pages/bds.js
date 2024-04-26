@@ -46,6 +46,18 @@ const Bds = () => {
                 </div>
                 <div></div>
             </div>
+            <div className={styles.bileog}>
+                <a download="..imgs/Bileog_Eolais_CFC.jpg" href="../imgs/Bileog_Eolais_CFC.jpg" title="ImageName">
+                    <p>íoslódáil an bhileog eolais BDS ⤵️</p>
+                    <img alt="Bileog Eolais CFC" src="../imgs/Bileog_Eolais_CFC.jpg" />
+                </a>
+            </div>
+            <div className={styles.bileogText}>
+                <a download="..imgs/Bileog_Eolais_CFC.jpg" href="../imgs/Bileog_Eolais_CFC.jpg" title="ImageName">
+
+                    <p> ➡️ íoslódáil an bhileog eolais BDS ⬅️</p>
+                </a>
+            </div>
             <div className={styles.countyList}>
                 {Object.entries(counties).map(([county, data]) => (
                     <a key={county} className={`${styles.county} ${styles[county]}`} href={data.email}>{data.name}</a>

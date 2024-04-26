@@ -13,14 +13,14 @@
     /* justify-content: center; */
     align-items: center;
     height: 100vh;
-    gap: 25px;
+    gap: 20px;
 }
 
 .county {
-    font-size: 24pt;
+    font-size: 20pt;
     text-align: center;
     width: 250px;
-    padding: 10px;
+    padding: 8px;
     border: 2px rgb(254, 86, 86) dotted;
     border-radius: 10px;
     color: black;
@@ -33,7 +33,39 @@
     text-shadow: 0px 0px 5px black, 2px 0px black, -2px 0px black;
 }
 
-@media (max-width: 720px) {
+.bileog {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 200px
+}
+
+.bileog img {
+    width: 200px;
+}
+
+.bileog p {
+    color: rgb(255, 61, 96);
+    text-shadow: none;
+    font-size: 14pt;
+}
+
+.bileogText {
+    position: fixed;
+    top: 150px;
+    right: -110px;
+    rotate: 90deg;
+    scale: 0.9;
+    display: none;
+}
+
+.bileogText p {
+    color: rgb(255, 61, 96);
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+@media (max-width: 750px) {
     .countyList {
         gap: 15px;
     }
@@ -46,6 +78,14 @@
 
     .title {
         gap: 10%;
+    }
+
+    .bileog {
+        display: none;
+    }
+
+    .bileogText {
+        display: inline;
     }
 }
 

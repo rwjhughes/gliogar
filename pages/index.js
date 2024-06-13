@@ -23,12 +23,12 @@ const Index = () => {
       <div className={styles.textcontainer}>
 
         <div className={styles.content}>
-          {/* <div className={styles.title}>Ticéid
-            <br />
+          <div className={styles.title}>Ticéid
+            {/* <br />
             <a href="https://www.tickettailor.com/events/gliogar/1193850" target="_blank"><li><date>28 Aibreán</date><br />Cuar & Muireann Ní Shé</li></a>
             <br />
-            <a href="https://www.tickettailor.com/events/gliogar/1209899" target="_blank"><li><date>2 Bealtaine</date> Brìghde Chaimbeul & Seamus Hyland</li></a>
-          </div> */}
+            <a href="https://www.tickettailor.com/events/gliogar/1209899" target="_blank"><li><date>2 Bealtaine</date> Brìghde Chaimbeul & Seamus Hyland</li></a> */}
+          </div>
 
           <div className={styles.tooltip}>diabhal ticéad anseo anois</div>
         </div>

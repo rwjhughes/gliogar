@@ -4,20 +4,20 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/cuar',
-                destination: 'https://buytickets.at/gliogar/1193850',
+                source: '/inisoirr',
+                destination: 'https://buytickets.at/gliogar/1293982',
                 permanent: false,
             },
             {
-                source: '/brighde',
-                destination: 'https://buytickets.at/gliogar/1209899',
+                source: '/indreabhan',
+                destination: 'https://buytickets.at/gliogar/1293993',
                 permanent: false,
             },
-            // {
-            //     source: '/bds',
-            //     destination: 'https://tinyurl.com/smachtbhannai',
-            //     permanent: false,
-            // },
+            {
+                source: '/corrnamona',
+                destination: 'https://buytickets.at/gliogar/1294006',
+                permanent: false,
+            },
         ]
     }
 }

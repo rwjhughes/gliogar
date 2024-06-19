@@ -47,7 +47,7 @@ const Index = () => {
         <div className={styles.content}>
           <div className={styles.title}>Fúinn</div>
           <div className={styles.tooltip} style={{ width: '330px' }}>Is cnuasach ealaíontóirí muid Gliogar a chuireanns imeachtaí cultúrtha ar siúl,
-            go háirid trí mheáin na Gaeilge agus le ealaíontóirí comhaimseartha Gaelacha.
+            go háirid trí mheáin na Gaeilge agus le healaíontóirí comhaimseartha Gaelacha.
             Tá muid lonnaithe i gConamara Theas.<br /><br />
             📧 <a href="mailto:eolas@gliogar.ie" target="_blank">eolas@gliogar.ie</a><br /><br />
             <a href="https://instagram.com/gliogar_" target="_blank">@gliogar_</a></div>

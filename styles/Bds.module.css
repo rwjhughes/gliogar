@@ -89,6 +89,15 @@
     .bileogText {
         display: inline;
     }
+
+    .container h1 {
+        font-size: 18pt;
+        margin: 6% 2%;
+    }
+
+    .container h2 {
+        font-size: 12pt;
+    }
 }
 
 .cork {

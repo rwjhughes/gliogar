@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import React from 'react';
+import Head from 'next/head';
 
 // ffmpeg -i 17.jpg -vf scale=400:500 17_0.jpg
 
@@ -26,6 +27,9 @@ const Index = () => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Gliogar</title>
+      </Head>
       <div className={styles.imagecontainer}>
         {tiles}
       </div>
@@ -44,7 +48,7 @@ const Index = () => {
           {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
         </div>
 
-        <div className={styles.content}>
+        <div className={` ${styles.content} ${styles.fuinn}`}>
           <div className={styles.title}>Fúinn</div>
           <div className={styles.tooltip} style={{ width: '330px' }}>Is cnuasach ealaíontóirí muid Gliogar a chuireanns imeachtaí cultúrtha ar siúl,
             go háirid trí mheáin na Gaeilge agus le healaíontóirí comhaimseartha Gaelacha.

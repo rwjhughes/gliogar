@@ -38,14 +38,14 @@ const Index = () => {
         <div className={` ${styles.content} ${styles.ticeid}`}>
           <div className={styles.title}>Ticéid
             <br />
-            <h2>Ar An Dé Deiridh</h2>
+            {/* <h2>Ar An Dé Deiridh</h2>
             camchuairt mí Iúil
             <a href="https://buytickets.at/gliogar/1293982" target="_blank"><li><date>16ú</date> - Inis Oírr - €5</li></a>
             <a href="https://buytickets.at/gliogar/1293993" target="_blank"><li><date>18ú</date> - Indreabhán - €5</li></a>
-            <a href="https://buytickets.at/gliogar/1294006" target="_blank"><li><date>24ú</date> - Corr na Móna - saor in aisce</li></a>
+            <a href="https://buytickets.at/gliogar/1294006" target="_blank"><li><date>24ú</date> - Corr na Móna - saor in aisce</li></a> */}
           </div>
 
-          {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
+          <div className={styles.tooltip}>diabhal ticéad anseo anois</div>
         </div>
 
         <div className={` ${styles.content} ${styles.fuinn}`}>

@@ -100,7 +100,7 @@
 }
 
 .ticeid {
-  width: 400px;
+  /* width: 400px; */
   margin-bottom: 30px;
   cursor: default;
 }
@@ -120,7 +120,7 @@
   font-size: 15pt;
   position: absolute;
   transition: opacity 0.5s ease-in-out;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .content:hover .tooltip {

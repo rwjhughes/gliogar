@@ -19,7 +19,7 @@
 .largeTile {
   grid-column: span 2;
   grid-row: span 2;
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .tile:hover {
@@ -36,22 +36,10 @@
   object-fit: cover;
 }
 
-
-@media (max-width: 800px) {
-  .imagecontainer {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .fuinn .tooltip {
-    font-size: 11pt;
-  }
-}
-
 .textcontainer {
   z-index: 10;
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 670px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -64,16 +52,17 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 240px;
   /* height: 150px; */
   border: 15px double rgba(130, 99, 174, 0.523);
   border-radius: 5px;
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.375);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .title {
@@ -109,7 +98,7 @@
   line-height: 40px;
 }
 
-.tooltip {
+.content .tooltip {
   opacity: 0;
   background-color: rgba(115, 89, 116, 0.851);
   border: 2px dashed rgb(22, 8, 42);
@@ -125,4 +114,39 @@
 
 .content:hover .tooltip {
   opacity: 1;
+}
+
+.tacaiocht {
+  width: 420px;
+}
+
+.logos {
+  text-align: center;
+}
+
+.logos img {
+  height: auto;
+  max-width: 100px;
+  max-height: 60px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+  .imagecontainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .textcontainer {
+    top: 800px;
+  }
+
+  .fuinn .tooltip {
+    font-size: 11pt;
+  }
+
+  .tacaiocht {
+    width: 250px;
+  }
 }

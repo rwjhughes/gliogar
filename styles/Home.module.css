@@ -19,7 +19,7 @@
 .largeTile {
   grid-column: span 2;
   grid-row: span 2;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .tile:hover {
@@ -89,13 +89,14 @@
 }
 
 .ticeid {
-  /* width: 400px; */
+  width: 400px;
   margin-bottom: 30px;
   cursor: default;
 }
 
 .ticeid h2 {
-  line-height: 40px;
+  line-height: 60px;
+  color: aliceblue;
 }
 
 .content .tooltip {

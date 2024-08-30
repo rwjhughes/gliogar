@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const Index = () => {
 
-  const numberOfImages = 19; // Update on new posters
+  const numberOfImages = 20; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -35,6 +35,15 @@ const Index = () => {
       </div>
       <div className={styles.textcontainer}>
 
+        {/* TICEID */}
+        <div className={` ${styles.content} ${styles.ticeid}`}>
+          <div className={styles.title}>Ticéid
+            <br />
+            <a href="https://buytickets.at/gliogar/1377503" target="_blank"><h2><date>20/09</date> - Fáistineach</h2></a>
+          </div>
+          {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
+        </div>
+
         {/* FUINN */}
         <div className={` ${styles.content} ${styles.fuinn}`}>
           <div className={styles.title}>Fúinn</div>
@@ -43,19 +52,6 @@ const Index = () => {
             Tá muid lonnaithe i gConamara Theas.<br /><br />
             📧 <a href="mailto:eolas@gliogar.ie" target="_blank">eolas@gliogar.ie</a><br /><br />
             <a href="https://instagram.com/gliogar_" target="_blank">@gliogar_</a></div>
-        </div>
-
-        {/* TICEID */}
-        <div className={` ${styles.content} ${styles.ticeid}`}>
-          <div className={styles.title}>Ticéid
-            {/* <br /> */}
-            {/* <h2>Ar An Dé Deiridh</h2>
-            camchuairt mí Iúil
-            <a href="https://buytickets.at/gliogar/1293982" target="_blank"><li><date>16ú</date> - Inis Oírr - €5</li></a>
-            <a href="https://buytickets.at/gliogar/1293993" target="_blank"><li><date>18ú</date> - Indreabhán - €5</li></a>
-            <a href="https://buytickets.at/gliogar/1294006" target="_blank"><li><date>24ú</date> - Corr na Móna - saor in aisce</li></a> */}
-          </div>
-          <div className={styles.tooltip}>diabhal ticéad anseo anois</div>
         </div>
 
         {/* PREAS */}

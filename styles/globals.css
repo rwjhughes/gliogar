@@ -27,7 +27,7 @@ a {
   color: rgb(0, 0, 120);
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 2px -2px 5px white;
+  text-shadow: 2px -2px 5px rgb(167, 167, 167);
   transition: color 0.5s, text-shadow 0.5s;
 }
 

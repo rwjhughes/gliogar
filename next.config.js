@@ -4,18 +4,8 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/inisoirr',
-                destination: 'https://buytickets.at/gliogar/1293982',
-                permanent: false,
-            },
-            {
-                source: '/indreabhan',
-                destination: 'https://buytickets.at/gliogar/1293993',
-                permanent: false,
-            },
-            {
-                source: '/corrnamona',
-                destination: 'https://buytickets.at/gliogar/1294006',
+                source: '/faistineach',
+                destination: 'https://buytickets.at/gliogar/1377503',
                 permanent: false,
             },
         ]

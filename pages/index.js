@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const Index = () => {
 
-  const numberOfImages = 20; // Update on new posters
+  const numberOfImages = 21; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -37,9 +37,9 @@ const Index = () => {
 
         {/* TICEID */}
         <div className={` ${styles.content} ${styles.ticeid}`}>
-          <div className={styles.title}>Ticéid
-            <br />
-            <a href="https://buytickets.at/gliogar/1377503" target="_blank"><h2><date>20/09</date> - Fáistineach</h2></a>
+          <div className={styles.title}>
+            <h2><date>19/10</date> - Céilí</h2>
+            <h3>Halla Éinne,<br />an Cheathrú Rua</h3>
           </div>
           {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
         </div>
@@ -58,6 +58,8 @@ const Index = () => {
         <div className={` ${styles.content} ${styles.preas}`}>
           <div className={styles.title}>Preas
             <br />
+            <a href="https://daily.bandcamp.com/scene-report/ta-gliogar-ag-tabhairt-ardan-do-weirdo-ceol-ar-fud-na-heireann" target="_blank">
+              <li>Bandcamp</li></a>
             <a href="https://tuairisc.ie/is-brea-an-rud-e-daoine-oga-a-fheiceail-i-mbun-na-dramaiochta-aris-in-iar-chonnachta/" target="_blank">
               <li>Tuairisc</li></a>
             <a href="https://www.rte.ie/radio/rnag/clips/22415499/" target="_blank">

@@ -4,8 +4,8 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/faistineach',
-                destination: 'https://buytickets.at/gliogar/1377503',
+                source: '/bandcamp',
+                destination: 'https://daily.bandcamp.com/scene-report/ta-gliogar-ag-tabhairt-ardan-do-weirdo-ceol-ar-fud-na-heireann',
                 permanent: false,
             },
         ]

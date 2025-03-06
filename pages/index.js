@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css'
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 
 // ffmpeg -i 17.jpg -vf scale=400:500 17_0.jpg
@@ -25,6 +25,38 @@ const Index = () => {
     }
   }
 
+  const scriptURL =
+    'https://script.google.com/macros/s/AKfycbypE4ELklJZ0cRdo7BhWLUtFuM11qqdKU1AQ4Rlxjx9ct1ZVCaDWXONKFo2jlLECiNj/exec';
+
+  const [formData, setFormData] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const form = new FormData();
+      Object.keys(formData).forEach((key) => form.append(key, formData[key]));
+
+      await fetch(scriptURL, {
+        method: 'POST',
+        body: form,
+        mode: 'no-cors', // Using no-cors mode
+      });
+
+      alert('Form submitted successfully!');
+      setFormData({});
+    } catch (error) {
+      console.error('Error submitting the form:', error);
+      alert('Failed to submit the form.');
+    } finally {
+    }
+  };
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -42,6 +74,38 @@ const Index = () => {
             <h3>Halla Éinne,<br />an Cheathrú Rua</h3>
           </div>
           {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
+        </div>
+
+        <div className={styles.form}>
+          <h1>Submit Your Form</h1>
+          <form onSubmit={handleSubmit}>
+            {/* Example Input Fields */}
+            <div>
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder='Mo Dhuine'
+                value={formData.name || ''}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder='modhuine@gaelmail.com'
+                value={formData.email || ''}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
         </div>
 
         {/* FUINN */}

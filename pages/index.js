@@ -76,10 +76,9 @@ const Index = () => {
           {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
         </div>
 
-        <div className={styles.form}>
+        {/* <div className={styles.form}>
           <h1>Submit Your Form</h1>
           <form onSubmit={handleSubmit}>
-            {/* Example Input Fields */}
             <div>
               <label htmlFor="name">Name:</label>
               <input
@@ -106,7 +105,7 @@ const Index = () => {
             </div>
             <button type="submit">Submit</button>
           </form>
-        </div>
+        </div> */}
 
         {/* FUINN */}
         <div className={` ${styles.content} ${styles.fuinn}`}>

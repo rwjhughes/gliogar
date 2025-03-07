@@ -39,7 +39,7 @@
 .textcontainer {
   z-index: 10;
   position: absolute;
-  top: 670px;
+  top: 900px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -88,14 +88,40 @@
   background-color: #0000009f;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .ticeid {
   width: 320px;
   cursor: default;
+  /* position: absolute; */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .ticeid h2 {
   line-height: 60px;
   color: aliceblue;
+}
+
+.form {
+  position: sticky;
+  top: 10px;
+  transform: translateX(100%);
+  overflow: hidden;
+  margin-left: auto;
+  color: aliceblue;
+}
+
+.form button {
+  background-color: rgb(0, 136, 255);
+  color: aliceblue;
+  border: aqua 1px solid;
+  border-radius: 5px;
 }
 
 .content .tooltip {
@@ -106,10 +132,10 @@
   text-shadow: none;
   border-radius: 6px;
   padding: 15px;
-  font-size: 15pt;
+  font-size: 12pt;
+  text-align: justify;
   position: absolute;
   transition: opacity 0.5s ease-in-out;
-  /* text-align: justify; */
 }
 
 .content:hover .tooltip {
@@ -139,7 +165,11 @@
   }
 
   .textcontainer {
-    top: 800px;
+    top: 1300px;
+  }
+
+  .form {
+    display: none;
   }
 
   .fuinn .tooltip {

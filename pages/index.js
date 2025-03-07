@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const Index = () => {
 
-  const numberOfImages = 21; // Update on new posters
+  const numberOfImages = 23; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -58,60 +58,67 @@ const Index = () => {
 
 
   return (
-    <div className={styles.container}>
+    <div >
       <Head>
         <title>Gliogar</title>
       </Head>
       <div className={styles.imagecontainer}>
         {tiles}
       </div>
+
+
+
       <div className={styles.textcontainer}>
 
-        {/* TICEID */}
-        <div className={` ${styles.content} ${styles.ticeid}`}>
-          <div className={styles.title}>
-            <h2><date>19/10</date> - Céilí</h2>
-            <h3>Halla Éinne,<br />an Cheathrú Rua</h3>
+        <div className={styles.row}>
+          {/* TICEID */}
+          <div className={` ${styles.content} ${styles.ticeid}`}>
+            <div className={styles.title}>
+              <a href="/ultan"><h2><date>04/04</date><br />Ultan O'Brien</h2>
+                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3></a>
+              <h2><date>08/03</date> Céilí</h2>
+              <h3>Halla Éinne,<br />an Cheathrú Rua</h3>
+            </div>
+            {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
           </div>
-          {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
-        </div>
 
-        {/* <div className={styles.form}>
-          <h1>Submit Your Form</h1>
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder='Mo Dhuine'
-                value={formData.name || ''}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder='modhuine@gaelmail.com'
-                value={formData.email || ''}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <button type="submit">Submit</button>
-          </form>
-        </div> */}
+          <div className={` ${styles.form} ${styles.content}`}>
+            <h1>Liosta Seoltaí</h1>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="name">Ainm:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder='Mo Dhuine'
+                  value={formData.name || ''}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="email">Rphost:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder='modhuine@gaelmail.com'
+                  value={formData.email || ''}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <button type="submit">Cláraigh</button>
+            </form>
+          </div></div>
+
 
         {/* FUINN */}
         <div className={` ${styles.content} ${styles.fuinn}`}>
           <div className={styles.title}>Fúinn</div>
           <div className={styles.tooltip} style={{ width: '330px' }}>Is cnuasach ealaíontóirí muid Gliogar a chuireanns imeachtaí cultúrtha ar siúl,
-            go háirid trí mheáin na Gaeilge agus le healaíontóirí comhaimseartha Gaelacha.
+            go háirid trí mheán na Gaeilge agus le healaíontóirí comhaimseartha Gaelacha.
             Tá muid lonnaithe i gConamara Theas.<br /><br />
             📧 <a href="mailto:eolas@gliogar.ie" target="_blank">eolas@gliogar.ie</a><br /><br />
             <a href="https://instagram.com/gliogar_" target="_blank">@gliogar_</a></div>
@@ -153,7 +160,7 @@ const Index = () => {
             <img src="/logos/udaras.jpg"></img>
           </div>
         </div>
-      </div>
+      </div >
     </div >
   );
 };

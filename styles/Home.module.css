@@ -124,6 +124,11 @@
   border-radius: 5px;
 }
 
+.form button:active {
+  color: rgb(0, 136, 255);
+  background-color: aliceblue;
+}
+
 .content .tooltip {
   opacity: 0;
   background-color: rgba(115, 89, 116, 0.851);

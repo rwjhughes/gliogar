@@ -47,10 +47,10 @@ const Index = () => {
         mode: 'no-cors', // Using no-cors mode
       });
 
-      alert('Form submitted successfully!');
+      alert("D'éirigh leat do sheoladh ríomhphoist a chur chugainn!");
       setFormData({});
     } catch (error) {
-      console.error('Error submitting the form:', error);
+      console.error('Nior éirigh leat do sheoladh ríomhphoist a chur chugainn:', error);
       alert('Failed to submit the form.');
     } finally {
     }

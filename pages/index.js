@@ -76,8 +76,6 @@ const Index = () => {
             <div className={styles.title}>
               <a href="/ultan"><h2><date>04/04</date><br />Ultan O'Brien</h2>
                 <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3></a>
-              <h2><date>08/03</date> Céilí</h2>
-              <h3>Halla Éinne,<br />an Cheathrú Rua</h3>
             </div>
             {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
           </div>

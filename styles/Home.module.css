@@ -39,7 +39,7 @@
 .textcontainer {
   z-index: 10;
   position: absolute;
-  top: 900px;
+  top: 800px;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -101,11 +101,16 @@
   /* position: absolute; */
   left: 50%;
   transform: translateX(-50%);
+  transition: border-color 0.3s ease-in-out;
 }
 
 .ticeid h2 {
   line-height: 60px;
   color: aliceblue;
+}
+
+.ticeid:hover {
+  border-color: lightpink;
 }
 
 .form {

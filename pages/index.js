@@ -72,11 +72,14 @@ const Index = () => {
 
         <div className={styles.row}>
           {/* TICEID */}
+
           <div className={` ${styles.content} ${styles.ticeid}`}>
-            <div className={styles.title}>
-              <a href="/ultan"><h2><date>04/04</date><br />Ultan O'Brien</h2>
-                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3></a>
-            </div>
+            <a href="/ultan">
+              <div className={styles.title}>
+                <h2><date>04/04</date><br />Ultan O'Brien</h2>
+                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
+              </div>
+            </a>
             {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
           </div>
 

@@ -18,6 +18,11 @@ const nextConfig = {
                 destination: 'https://tinyurl.com/smachtbhannai',
                 permanent: false,
             },
+            {
+                source: '/ceol',
+                destination: 'https://docs.google.com/forms/d/e/1FAIpQLScIuIwh2QD4qcYhoj73J9u5IVHBKruZQb8kBqNrN4zZ5AXJrg/viewform?usp=dialog',
+                permanent: false,
+            },
         ]
     }
 }

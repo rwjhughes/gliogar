@@ -72,7 +72,7 @@ const Index = () => {
 
         <div className={styles.row}>
           {/* TICEID */}
-
+          {/* 
           <div className={` ${styles.content} ${styles.ticeid}`}>
             <a href="/ultan">
               <div className={styles.title}>
@@ -80,8 +80,7 @@ const Index = () => {
                 <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
               </div>
             </a>
-            {/* <div className={styles.tooltip}>diabhal ticéad anseo anois</div> */}
-          </div>
+          </div> */}
 
           <div className={` ${styles.form} ${styles.content}`}>
             <h1>Liosta Seoltaí</h1>

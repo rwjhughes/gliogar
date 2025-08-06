@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const Index = () => {
 
-  const numberOfImages = 23; // Update on new posters
+  const numberOfImages = 27; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -72,15 +72,15 @@ const Index = () => {
 
         <div className={styles.row}>
           {/* TICEID */}
-          {/* 
+
           <div className={` ${styles.content} ${styles.ticeid}`}>
-            <a href="/ultan">
+            <a href="/ceol">
               <div className={styles.title}>
-                <h2><date>04/04</date><br />Ultan O'Brien</h2>
-                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
+                <h2><date>19 + 21/08</date><br />Ceardlann Ceoil Leictreonaigh</h2>
+                <h3>Áras na nGael<br />Gaillimh</h3>
               </div>
             </a>
-          </div> */}
+          </div>
 
           <div className={` ${styles.form} ${styles.content}`}>
             <h1>Liosta Seoltaí</h1>

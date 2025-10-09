@@ -14,8 +14,13 @@ const nextConfig = {
                 permanent: false,
             },
             {
-                source: '/ceol',
-                destination: 'https://docs.google.com/forms/d/e/1FAIpQLScIuIwh2QD4qcYhoj73J9u5IVHBKruZQb8kBqNrN4zZ5AXJrg/viewform?usp=dialog',
+                source: '/ticeid',
+                destination: 'https://gliogar.eventbrite.ie/',
+                permanent: false,
+            },
+            {
+                source: '/ticead',
+                destination: 'https://gliogar.eventbrite.ie/',
                 permanent: false,
             },
         ]

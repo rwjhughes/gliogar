@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const Index = () => {
 
-  const numberOfImages = 28; // Update on new posters
+  const numberOfImages = 29; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -74,10 +74,10 @@ const Index = () => {
           {/* TICEID */}
 
           <div className={` ${styles.content} ${styles.ticeid}`}>
-            <a target="_blank" href="https://gliogar.eventbrite.ie/">
+            <a target="_blank" href="/ticeid">
               <div className={styles.title}>
-                <h2><date>Dé hAoine 24/10</date><br />Aoife Nic Dhomhnaill & Liam Lonergan,<br />Niamh O'Brien</h2>
-                <h3>Seanscoil Sailearna<br />Indreabhán</h3>
+                <h2><date>Dé hAoine 31/10</date><br />Olan Monk,<br />Gliogar</h2>
+                <h3>Amharclann Oileán Altanach<br />Gaillimh</h3>
               </div>
             </a>
           </div>

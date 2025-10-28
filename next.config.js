@@ -15,12 +15,17 @@ const nextConfig = {
             },
             {
                 source: '/ticeid',
-                destination: 'https://gliogar.eventbrite.ie/',
+                destination: 'https://www.eventbrite.ie/e/olan-monk-songs-for-nothing-prelude-gliogar-tickets-1814374154939',
                 permanent: false,
             },
             {
                 source: '/ticead',
-                destination: 'https://gliogar.eventbrite.ie/',
+                destination: 'https://www.eventbrite.ie/e/olan-monk-songs-for-nothing-prelude-gliogar-tickets-1814374154939',
+                permanent: false,
+            },
+            {
+                source: '/olan',
+                destination: 'https://www.eventbrite.ie/e/olan-monk-songs-for-nothing-prelude-gliogar-tickets-1814374154939',
                 permanent: false,
             },
         ]

@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import React, { useState } from 'react';
 import Head from 'next/head';
+import { Analytics } from "@vercel/analytics/next"
 
 // ffmpeg -i 17.jpg -vf scale=400:500 17_0.jpg
 
@@ -161,6 +162,7 @@ const Index = () => {
           </div>
         </div>
       </div >
+      <Analytics />
     </div >
   );
 };

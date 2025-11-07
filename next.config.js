@@ -15,12 +15,12 @@ const nextConfig = {
             },
             {
                 source: '/ticeid',
-                destination: 'gliogar.eventbrite.ie',
+                destination: 'https://gliogar.eventbrite.ie',
                 permanent: false,
             },
             {
                 source: '/ticead',
-                destination: 'gliogar.eventbrite.ie',
+                destination: 'https://gliogar.eventbrite.ie',
                 permanent: false,
             },
         ]

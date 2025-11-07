@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/next"
 
 const Index = () => {
 
-  const numberOfImages = 29; // Update on new posters
+  const numberOfImages = 30; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -77,8 +77,8 @@ const Index = () => {
           <div className={` ${styles.content} ${styles.ticeid}`}>
             <a target="_blank" href="/ticeid">
               <div className={styles.title}>
-                <h2><date>Dé hAoine 31/10</date><br />Olan Monk,<br />Gliogar</h2>
-                <h3>Amharclann Oileán Altanach<br />Gaillimh</h3>
+                <h2><date>Dé hAoine 21/11</date><br />DúlamBan,<br />Éabha Breathnach</h2>
+                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
               </div>
             </a>
           </div>

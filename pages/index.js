@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Analytics } from "@vercel/analytics/next"
 
-// ffmpeg -i 17.jpg -vf scale=400:500 17_0.jpg
+// ffmpeg -i 17.jpg -vf scale=800:1000 17_0.jpg
 
 const Index = () => {
 
-  const numberOfImages = 30; // Update on new posters
+  const numberOfImages = 31; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -81,6 +81,12 @@ const Index = () => {
                 <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
               </div>
             </a>
+            <div className={styles.title}>
+              <a target="_blank" href="/posters/30.jpg">
+                <h2><date>Dé Sathairn 22/11</date><br />Lá Mór Spóirt 's Ceoil</h2>
+                <h3>Sacar, Céilí agus Gig<br />An Cheathrú Rua</h3>
+              </a>
+            </div>
           </div>
 
           <div className={` ${styles.form} ${styles.content}`}>
@@ -112,7 +118,8 @@ const Index = () => {
               </div>
               <button type="submit">Cláraigh</button>
             </form>
-          </div></div>
+          </div>
+        </div>
 
 
         {/* FUINN */}

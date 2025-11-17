@@ -57,20 +57,30 @@
   justify-content: center;
   width: 240px;
   /* height: 150px; */
-  border: 15px double rgba(130, 99, 174, 0.523);
+  border: 2px solid rgba(130, 99, 174, 0.523);
   border-radius: 5px;
   position: relative;
   /* cursor: pointer; */
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .title {
   text-align: center;
   font-weight: normal;
-  font-size: 20pt;
+  font-size: 1.5rem;
   color: #fff;
   text-shadow: 3px 3px 2px rgb(98, 38, 128);
+  border-bottom: 2px solid rgba(130, 99, 174, 0.523);
+  border-top: 2px solid rgba(130, 99, 174, 0.523);
+  transition: all 0.2s ease-in-out;
+
+}
+
+.title:hover {
+  border-bottom: 2px solid rgba(130, 99, 174, 1);
+  border-top: 2px solid rgba(130, 99, 174, 1);
+  background-color: rgba(130, 99, 174, 0.1);
 }
 
 .title li {
@@ -101,17 +111,23 @@
   /* position: absolute; */
   left: 50%;
   transform: translateX(-50%);
-  transition: border-color 0.3s ease-in-out;
+  /* transition: border-color 0.3s ease-in-out; */
 }
 
 .ticeid h2 {
-  line-height: 60px;
+  line-height: 50px;
   color: aliceblue;
+  font-size: 2.25rem;
 }
 
-.ticeid:hover {
-  border-color: lightpink;
+.ticeid h3 {
+  font-size: 1.5rem;
+  margin: 5px 0 25px 0;
 }
+
+/* .ticeid:hover {
+  border-color: lightpink;
+} */
 
 .form {
   position: sticky;

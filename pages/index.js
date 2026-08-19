@@ -77,16 +77,18 @@ const Index = () => {
           <div className={` ${styles.content} ${styles.ticeid}`}>
             <a target="_blank" href="/ticeid">
               <div className={styles.title}>
-                <h2><date>Dé hAoine 12/09</date><br />Bí Liom Bí<br />Aisling Lyons, Becky Ní Éallaithe & Muireann Ní Shé</h2>
+                <h2><date>Dé Sathairn 12/09</date><br />Bí Liom Bí</h2>
+                <h3>Aisling Lyons, Becky Ní Éallaithe & Muireann Ní Shé</h3>
                 <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
               </div>
             </a>
-            {/* <div className={styles.title}>
-              <a target="_blank" href="/posters/30.jpg">
-                <h2><date>Dé Sathairn 12/09</date><br />Lá Mór Spóirt 's Ceoil</h2>
-                <h3>Sacar, Céilí agus Gig<br />An Cheathrú Rua</h3>
+            <div className={styles.title}>
+              <a target="_blank" href="/traphaidin">
+                <h2><date>Dé Sathairn 26/09</date><br />Trá Phaídín</h2>
+                <h3>Seoladh Albaim <i>Cloch 's Claí</i></h3>
+                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
               </a>
-            </div> */}
+            </div>
           </div>
 
           <div className={` ${styles.form} ${styles.content}`}>

@@ -23,6 +23,16 @@ const nextConfig = {
                 destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
                 permanent: false,
             },
+            {
+                source: '/biliombi',
+                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
+                permanent: false,
+            },
+            {
+                source: '/bi',
+                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
+                permanent: false,
+            },
         ]
     }
 }

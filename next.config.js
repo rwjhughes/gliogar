@@ -15,12 +15,12 @@ const nextConfig = {
             },
             {
                 source: '/ticeid',
-                destination: 'https://gliogar.eventbrite.ie',
+                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
                 permanent: false,
             },
             {
                 source: '/ticead',
-                destination: 'https://gliogar.eventbrite.ie',
+                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
                 permanent: false,
             },
         ]

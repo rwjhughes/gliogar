@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Analytics } from "@vercel/analytics/next"
 
-// ffmpeg -i 17.jpg -vf scale=800:1000 17_0.jpg
+// ffmpeg -i 31_0.jpg -vf scale=800:1000 31.jpg
 
 const Index = () => {
 
-  const numberOfImages = 31; // Update on new posters
+  const numberOfImages = 32; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -77,16 +77,16 @@ const Index = () => {
           <div className={` ${styles.content} ${styles.ticeid}`}>
             <a target="_blank" href="/ticeid">
               <div className={styles.title}>
-                <h2><date>Dé hAoine 21/11</date><br />DúlamBan,<br />Éabha Breathnach</h2>
+                <h2><date>Dé hAoine 12/09</date><br />Bí Liom Bí<br />Aisling Lyons, Becky Ní Éallaithe & Muireann Ní Shé</h2>
                 <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
               </div>
             </a>
-            <div className={styles.title}>
+            {/* <div className={styles.title}>
               <a target="_blank" href="/posters/30.jpg">
-                <h2><date>Dé Sathairn 22/11</date><br />Lá Mór Spóirt 's Ceoil</h2>
+                <h2><date>Dé Sathairn 12/09</date><br />Lá Mór Spóirt 's Ceoil</h2>
                 <h3>Sacar, Céilí agus Gig<br />An Cheathrú Rua</h3>
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div className={` ${styles.form} ${styles.content}`}>

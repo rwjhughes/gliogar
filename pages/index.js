@@ -156,18 +156,21 @@ const Index = () => {
           <div className={styles.title}>Tacaíocht</div>
           <br />
           <div className={styles.logos}>
-            <img src="/logos/optio.png"></img>
-            <img src="/logos/optds.jpg"></img>
-            <img src="/logos/optcf.png"></img>
-            <img src="/logos/optc.png"></img>
-            <img src="/logos/ciotog.png"></img>
-            <img src="/logos/fibin.png"></img>
-            <img src="/logos/taibhdhearc.png"></img>
-            <img src="/logos/gcc.png"></img>
-            <img src="/logos/roinn.png"></img>
-            <img src="/logos/ealain.jpg"></img>
-            <img src="/logos/arts_council.png"></img>
-            <img src="/logos/udaras.jpg"></img>
+            <img title="OPT Inis Oírr" src="/logos/optio.png"></img>
+            <img title="OPT Dhúiche Sheoigheach" src="/logos/optds.jpg"></img>
+            <img title="OPT Chois Fharraige" src="/logos/optcf.png"></img>
+            <img title="OPT Chléire" src="/logos/optc.png"></img>
+            <img title="Integration Office - CoCo na Gaillimhe" src="/logos/gcc_integration.png"></img>
+            <img title="Scéim Céad Míle Fáilte - Conradh na Gaeilge" src="/logos/cmf.png"></img>
+            <img title="Cuisle" src="/logos/cuisle.png"></img>
+            <img title="Ciotóg" src="/logos/ciotog.png"></img>
+            <img title="Fíbín" src="/logos/fibin.png"></img>
+            <img title="an Taibhdhearc" src="/logos/taibhdhearc.png"></img>
+            <img title="Galway Culture Company" src="/logos/gcc.png"></img>
+            <img title="Roinn na Gaeltachta" src="/logos/roinn.png"></img>
+            <img title="Ealaín na Gaeltachta" src="/logos/ealain.jpg"></img>
+            <img title="an Chomhairle Ealaíon" src="/logos/arts_council.png"></img>
+            <img title="Udáras na Gaeltachta" src="/logos/udaras.jpg"></img>
           </div>
         </div>
       </div >

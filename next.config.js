@@ -48,6 +48,11 @@ const nextConfig = {
                 destination: 'https://billetto.ie/e/tra-phaidin-cloch-s-clai-seanscoil-sailearna-26-mf-tickets-1983196',
                 permanent: false,
             },
+            {
+                source: '/teacdamsa',
+                destination: 'https://billet.to/s/au8hHd4',
+                permanent: false,
+            }
         ]
     }
 }

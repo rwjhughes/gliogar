@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { Analytics } from "@vercel/analytics/next"
 
-// ffmpeg -i 31_0.jpg -vf scale=800:1000 31.jpg
+// ffmpeg -i 0.jpg -vf scale=800:1000 31.jpg
 
 const Index = () => {
 
-  const numberOfImages = 32; // Update on new posters
+  const numberOfImages = 33; // Update on new posters
   const tiles = [];
 
   for (let i = numberOfImages - 1; i >= 0; i--) {
@@ -75,13 +75,6 @@ const Index = () => {
           {/* TICEID */}
 
           <div className={` ${styles.content} ${styles.ticeid}`}>
-            <a target="_blank" href="/ticeid">
-              <div className={styles.title}>
-                <h2><date>Dé Sathairn 12/09</date><br />Bí Liom Bí</h2>
-                <h3>Aisling Lyons, Becky Ní Éallaithe & Muireann Ní Shé</h3>
-                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
-              </div>
-            </a>
             <div className={styles.title}>
               <a target="_blank" href="/traphaidin">
                 <h2><date>Dé Sathairn 26/09</date><br />Trá Phaídín</h2>

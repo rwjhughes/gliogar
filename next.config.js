@@ -15,22 +15,12 @@ const nextConfig = {
             },
             {
                 source: '/ticeid',
-                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
+                destination: 'https://billetto.ie/e/tra-phaidin-cloch-s-clai-seanscoil-sailearna-26-mf-tickets-1983196',
                 permanent: false,
             },
             {
                 source: '/ticead',
-                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
-                permanent: false,
-            },
-            {
-                source: '/biliombi',
-                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
-                permanent: false,
-            },
-            {
-                source: '/bi',
-                destination: 'https://ie.powertik.com/events/aisling-lyons-becky-ni-eallaithe-muireann-ni-she-bi-liom-bi-seanscoil-sailearna-indreabhan',
+                destination: 'https://billetto.ie/e/tra-phaidin-cloch-s-clai-seanscoil-sailearna-26-mf-tickets-1983196',
                 permanent: false,
             },
             {

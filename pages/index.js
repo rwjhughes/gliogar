@@ -16,8 +16,12 @@ const randomSteps = (count, maxRem) => {
 
 const buildGlitchClip = () => {
     const stepCount = 4 + Math.floor(Math.random() * 3)
-    const left = randomSteps(stepCount, 1.6 + Math.random() * 1.6)
-    const right = randomSteps(stepCount, 1.6 + Math.random() * 1.6)
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+    const maxRem = isMobile
+        ? 0.6 + Math.random() * 1.4
+        : 1.6 + Math.random() * 1.8
+    const left = randomSteps(stepCount, maxRem)
+    const right = randomSteps(stepCount, maxRem)
     const points = []
 
     points.push(`${left[0]}rem 0`)
@@ -127,7 +131,7 @@ const Index = () => {
                 </div>
                 <div className={styles.signup}>
                     <h2>Liosta Seoltaí</h2>
-                    <label>Bí ar an eolas ar dtús agus sínigh suas</label>
+                    <label>Sínigh suas agus bí ar an eolas ar dtús</label>
                     <form onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name">Ainm:</label>

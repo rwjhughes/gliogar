@@ -1,174 +1,190 @@
-import styles from '../styles/Home.module.css'
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react'
+import styles from '../styles/Index.module.css'
 import Head from 'next/head';
-import { Analytics } from "@vercel/analytics/next"
+import Link from 'next/link';
 
-// ffmpeg -i 0.jpg -vf scale=800:1000 31.jpg
+const randomSteps = (count, maxRem) => {
+    const depths = []
+    for (let i = 0; i <= count; i++) {
+        const t = i / count
+        const peak = 1 - Math.abs(2 * t - 1)
+        const noise = 0.35 + Math.random() * 0.65
+        depths.push(+(maxRem * Math.max(peak * noise, 0.15)).toFixed(2))
+    }
+    return depths
+}
+
+const buildGlitchClip = () => {
+    const stepCount = 4 + Math.floor(Math.random() * 3)
+    const left = randomSteps(stepCount, 1.6 + Math.random() * 1.6)
+    const right = randomSteps(stepCount, 1.6 + Math.random() * 1.6)
+    const points = []
+
+    points.push(`${left[0]}rem 0`)
+    points.push(`calc(100% - ${right[0]}rem) 0`)
+
+    for (let i = 0; i < stepCount; i++) {
+        const y = ((i + 1) / stepCount) * 100
+        points.push(`calc(100% - ${right[i]}rem) ${y}%`)
+        points.push(`calc(100% - ${right[i + 1]}rem) ${y}%`)
+    }
+
+    points.push(`${left[stepCount]}rem 100%`)
+
+    for (let i = stepCount - 1; i >= 0; i--) {
+        const y = (i / stepCount) * 100
+        points.push(`${left[i + 1]}rem ${y}%`)
+        points.push(`${left[i]}rem ${y}%`)
+    }
+
+    return `polygon(${points.join(', ')})`
+}
+
+const GlitchSpan = ({ children, className }) => {
+    const [clipPath, setClipPath] = useState('none')
+
+    useEffect(() => {
+        setClipPath(buildGlitchClip())
+    }, [])
+
+    return (
+        <span className={className} style={{ clipPath }}>
+            {children}
+        </span>
+    )
+}
+
+const scriptURL =
+    'https://script.google.com/macros/s/AKfycbypE4ELklJZ0cRdo7BhWLUtFuM11qqdKU1AQ4Rlxjx9ct1ZVCaDWXONKFo2jlLECiNj/exec'
 
 const Index = () => {
+    const [formData, setFormData] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const numberOfImages = 33; // Update on new posters
-  const tiles = [];
-
-  for (let i = numberOfImages - 1; i >= 0; i--) {
-    if (i === numberOfImages - 1) {
-      tiles.push(
-        <div key={i} className={`${styles.tile} ${styles.largeTile}`}>
-          <img src={`/posters/${i}.jpg`} alt={`Image ${i}`} />
-        </div>
-      );
-    } else {
-      tiles.push(
-        <div key={i} className={styles.tile}>
-          <img src={`/posters/${i}.jpg`} alt={`Image ${i}`} />
-        </div>
-      );
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData((prev) => ({ ...prev, [name]: value }))
     }
-  }
 
-  const scriptURL =
-    'https://script.google.com/macros/s/AKfycbypE4ELklJZ0cRdo7BhWLUtFuM11qqdKU1AQ4Rlxjx9ct1ZVCaDWXONKFo2jlLECiNj/exec';
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setIsSubmitting(true)
+        try {
+            const form = new FormData()
+            Object.keys(formData).forEach((key) => form.append(key, formData[key]))
 
-  const [formData, setFormData] = useState({});
+            await fetch(scriptURL, {
+                method: 'POST',
+                body: form,
+                mode: 'no-cors',
+            })
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const form = new FormData();
-      Object.keys(formData).forEach((key) => form.append(key, formData[key]));
-
-      await fetch(scriptURL, {
-        method: 'POST',
-        body: form,
-        mode: 'no-cors', // Using no-cors mode
-      });
-
-      alert("D'éirigh leat do sheoladh ríomhphoist a chur chugainn!");
-      setFormData({});
-    } catch (error) {
-      console.error('Nior éirigh leat do sheoladh ríomhphoist a chur chugainn:', error);
-      alert('Failed to submit the form.');
-    } finally {
+            alert("D'éirigh leat do sheoladh ríomhphoist a chur chugainn!")
+            setFormData({})
+        } catch (error) {
+            console.error('Nior éirigh leat do sheoladh ríomhphoist a chur chugainn:', error)
+            alert('Failed to submit the form.')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
-  };
 
-
-  return (
-    <div >
-      <Head>
-        <title>Gliogar</title>
-      </Head>
-      <div className={styles.imagecontainer}>
-        {tiles}
-      </div>
-
-
-
-      <div className={styles.textcontainer}>
-
-        <div className={styles.row}>
-          {/* TICEID */}
-
-          <div className={` ${styles.content} ${styles.ticeid}`}>
-            <div className={styles.title}>
-              <a target="_blank" href="/traphaidin">
-                <h2><date>Dé Sathairn 26/09</date><br />Trá Phaídín</h2>
-                <h3>Seoladh Albaim <i>Cloch 's Claí</i></h3>
-                <h3>Amharclann Chois Fharraige,<br />Indreabhán</h3>
-              </a>
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>Gliogar</title>
+            </Head>
+            <div className={styles.header}>
+                <div className={styles.title}>
+                    <h1>FÉILE<br />GHLIOGAR</h1>
+                    <p className={styles.subtitle}>
+                        <span>Ealaín</span>
+                        <span>·</span>
+                        <span>Pobal</span>
+                        <span>·</span>
+                        <span>Teanga</span>
+                    </p>
+                </div>
+                <GlitchSpan className={styles.logo}>
+                    <img src="/logos/gliogar_ban_trans.png" alt="Lógó Ghliogar" />
+                </GlitchSpan>
             </div>
-          </div>
-
-          <div className={` ${styles.form} ${styles.content}`}>
-            <h1>Liosta Seoltaí</h1>
-            <form onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="name">Ainm:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder='Mo Dhuine'
-                  value={formData.name || ''}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email">Rphost:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder='modhuine@gaelmail.com'
-                  value={formData.email || ''}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <button type="submit">Cláraigh</button>
-            </form>
-          </div>
+            <div className={styles.content}>
+                <div>
+                    <GlitchSpan className={styles.location}>An Cheathrú Rua,<br />Conamara</GlitchSpan>
+                    <GlitchSpan className={styles.date}>5 - 7 Márta 2027</GlitchSpan>
+                </div>
+                <div>
+                    <GlitchSpan>Clár na féile ag tíocht go luath...</GlitchSpan>
+                </div>
+                <div>
+                    <GlitchSpan>Ceol</GlitchSpan>
+                    <GlitchSpan>Damhsa</GlitchSpan>
+                    <GlitchSpan>Amharc-Ealaín</GlitchSpan>
+                    <GlitchSpan>Stair</GlitchSpan>
+                    <GlitchSpan>Éiceolaíocht</GlitchSpan>
+                    <GlitchSpan>Spóirt</GlitchSpan>
+                </div>
+                <div className={styles.signup}>
+                    <h2>Liosta Seoltaí</h2>
+                    <label>Bí ar an eolas ar dtús agus sínigh suas</label>
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <label htmlFor="name">Ainm:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Mo Dhuine"
+                                value={formData.name || ''}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="email">Ríomhphost:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="modhuine@gaelmail.com"
+                                value={formData.email || ''}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className={isSubmitting ? styles.submitting : undefined}
+                        >
+                            {isSubmitting ? 'Á chlárú...' : 'Cláraigh'}
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div className={styles.footer}>
+                <div>
+                    <img src="/logos/gcc.png" alt="Comhairle Chondae na Gaillimhe" />
+                    <img src="/logos/ealain.png" alt="Ealaín na Gaeltachta" />
+                </div>
+                <div className={styles.footerRight}>
+                    <Link href="/cartlann">&#8658; An Chartlann</Link>
+                    <div className={styles.socials}>
+                        <Link href="https://web.cogar.ie/pr%C3%B3if%C3%ADl/gliogar" target="_blank">
+                            <img src="/icons/cogar.png" alt="Cogar" />
+                        </Link>
+                        <Link href="https://www.instagram.com/gliogar_" target="_blank">
+                            <img src="/icons/instagram.webp" alt="Instagram" />
+                        </Link>
+                    </div>
+                    <span>&copy; {new Date().getFullYear()} Gliogar</span>
+                </div>
+            </div>
+            <div className={styles.bg}>
+            </div>
         </div>
-
-
-        {/* FUINN */}
-        <div className={` ${styles.content} ${styles.fuinn}`}>
-          <div className={styles.title}>Fúinn</div>
-          <div className={styles.tooltip} style={{ width: '330px' }}>Is cnuasach ealaíontóirí muid Gliogar a chuireanns imeachtaí cultúrtha ar siúl,
-            go háirid trí mheán na Gaeilge agus le healaíontóirí comhaimseartha Gaelacha.
-            Tá muid lonnaithe i gConamara Theas.<br /><br />
-            📧 <a href="mailto:eolas@gliogar.ie" target="_blank">eolas@gliogar.ie</a><br /><br />
-            <a href="https://instagram.com/gliogar_" target="_blank">@gliogar_</a></div>
-        </div>
-
-        {/* PREAS */}
-        <div className={` ${styles.content} ${styles.preas}`}>
-          <div className={styles.title}>Preas
-            <br />
-            <a href="https://daily.bandcamp.com/scene-report/ta-gliogar-ag-tabhairt-ardan-do-weirdo-ceol-ar-fud-na-heireann" target="_blank">
-              <li>Bandcamp</li></a>
-            <a href="https://tuairisc.ie/is-brea-an-rud-e-daoine-oga-a-fheiceail-i-mbun-na-dramaiochta-aris-in-iar-chonnachta/" target="_blank">
-              <li>Tuairisc</li></a>
-            <a href="https://www.rte.ie/radio/rnag/clips/22415499/" target="_blank">
-              <li>Raidió na Gaeltachta</li></a>
-            <a href="https://nialler9.com/new-gaelic-music-themed-night-for-connemara-to-feature-brighde-chaimbeul-and-more/" target="_blank">
-              <li>Nialler9</li></a>
-            <a href="https://journalofmusic.com/news/irish-language-contemporary-music-collective-gliogar-host-concert-conamara" target="_blank">
-              <li>Journal of Music</li></a>
-          </div>
-        </div>
-
-        {/* TACAIOCHT */}
-        <div className={` ${styles.content} ${styles.tacaiocht}`}>
-          <div className={styles.title}>Tacaíocht</div>
-          <br />
-          <div className={styles.logos}>
-            <img title="OPT Inis Oírr" src="/logos/optio.png"></img>
-            <img title="OPT Dhúiche Sheoigheach" src="/logos/optds.jpg"></img>
-            <img title="OPT Chois Fharraige" src="/logos/optcf.png"></img>
-            <img title="OPT Chléire" src="/logos/optc.png"></img>
-            <img title="Integration Office - CoCo na Gaillimhe" src="/logos/gcc_integration.png"></img>
-            <img title="Scéim Céad Míle Fáilte - Conradh na Gaeilge" src="/logos/cmf.png"></img>
-            <img title="Cuisle" src="/logos/cuisle.png"></img>
-            <img title="Ciotóg" src="/logos/ciotog.png"></img>
-            <img title="Fíbín" src="/logos/fibin.png"></img>
-            <img title="an Taibhdhearc" src="/logos/taibhdhearc.png"></img>
-            <img title="Galway Culture Company" src="/logos/gcc.png"></img>
-            <img title="Roinn na Gaeltachta" src="/logos/roinn.png"></img>
-            <img title="Ealaín na Gaeltachta" src="/logos/ealain.jpg"></img>
-            <img title="an Chomhairle Ealaíon" src="/logos/arts_council.png"></img>
-            <img title="Udáras na Gaeltachta" src="/logos/udaras.jpg"></img>
-          </div>
-        </div>
-      </div >
-      <Analytics />
-    </div >
-  );
+    );
 };
+
 export default Index;

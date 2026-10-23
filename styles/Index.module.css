@@ -1,0 +1,253 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: berlin;
+  color: white;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  transform: scaleX(1.05);
+  background-image: url('/bg/img0.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  filter: hue-rotate(50deg) blur(6px);
+  z-index: -1;
+}
+
+.header {
+  /* padding: 1.5rem 4rem; */
+  /* border-bottom: 1.5px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  /* background-color: #4b365f; */
+  /* background: linear-gradient(#4b365f 0%, #4b365f 92%, #00000000 100%); */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 5rem;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  transition: letter-spacing 0.2s ease-in-out;
+}
+
+.header h1:hover {
+  letter-spacing: 0.2em;
+}
+
+.title {
+  color: #bbd631;
+  background-color: #ce8c8d;
+  padding: 0.5rem 12rem 0.5rem 4rem;
+  /* border-radius: 0.75rem 0 0 0; */
+  clip-path: polygon(0 0, calc(100% - 18rem) 0, 100% 100%, 0 100%);
+  /* background: linear-gradient(#ce8c8d 0%, #ce8c8d 90%, #00000000 100%); */
+
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.25rem;
+}
+
+.header p {
+  margin: 0;
+  margin-top: 0.25rem;
+  font-size: 1.75rem;
+}
+
+.logo {
+  display: block;
+  margin-right: 4rem;
+  padding: 0.65rem 1.25rem;
+  background-color: #e0dae4;
+}
+
+.logo img {
+  display: block;
+  width: 210px;
+  object-fit: cover;
+  filter: invert(1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  margin: 3rem 4rem;
+  gap: 3rem;
+  color: #4b365f;
+}
+
+.content>div {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.content span {
+  font-size: 2rem;
+  text-align: left;
+  margin: 0 2rem;
+  padding: 0.2rem 3.25rem;
+  background-color: #e0dae4;
+}
+
+.content>div:first-child span {
+  font-size: 3rem;
+  color: #bbd631;
+}
+
+.content>div:nth-child(2) span {
+  font-size: 2.75rem;
+}
+
+.content .location {
+  background-color: #415e66;
+}
+
+.content .date {
+  background-color: #4b365f;
+}
+
+.signup {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 0.75rem !important;
+  width: fit-content !important;
+  margin: 0 auto;
+  padding: 1.25rem 1.75rem;
+  background-color: #e0dae4;
+  color: #4b365f;
+}
+
+.signup h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #4b365f;
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.signup form>div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.signup label {
+  font-size: 1.1rem;
+}
+
+.signup input {
+  font-family: berlin;
+  font-size: 1.1rem;
+  padding: 0.4rem 0.6rem;
+  border: 1.5px solid #4b365f;
+  background: #f5f2f7;
+  color: #4b365f;
+}
+
+.signup input:focus {
+  outline: 2px solid #bbd631;
+  outline-offset: 1px;
+}
+
+.signup button {
+  font-family: berlin;
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  padding: 0.45rem 1rem;
+  border: 1.5px solid #4b365f;
+  background-color: #4b365f;
+  color: #bbd631;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.signup button:active:not(:disabled) {
+  background-color: #bbd631;
+  color: #4b365f;
+}
+
+.signup button:disabled,
+.signup button.submitting {
+  opacity: 0.55;
+  cursor: wait;
+  background-color: #7a6b8a;
+  color: #e0dae4;
+  border-color: #7a6b8a;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #ce8c8d;
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #4b365f;
+  font-size: 1rem;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer img {
+  height: 50px;
+}
+
+.footerRight {
+  gap: 2rem;
+}
+
+.socials {
+  gap: 1rem;
+}
+
+.socials img {
+  height: 25px;
+}
+
+.footer a {
+  font-size: 1.5rem;
+  color: #4b365f;
+  transition: text-shadow 0.2s;
+}
+
+.footer a:hover {
+  text-shadow: 2px 2px 5px #bbd631;
+}

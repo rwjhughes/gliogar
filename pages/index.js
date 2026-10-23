@@ -18,8 +18,8 @@ const buildGlitchClip = () => {
     const stepCount = 4 + Math.floor(Math.random() * 3)
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
     const maxRem = isMobile
-        ? 0.6 + Math.random() * 1.4
-        : 1.6 + Math.random() * 1.8
+        ? 0.6 + Math.random() * 1.3
+        : 1.6 + Math.random() * 1.6
     const left = randomSteps(stepCount, maxRem)
     const right = randomSteps(stepCount, maxRem)
     const points = []
